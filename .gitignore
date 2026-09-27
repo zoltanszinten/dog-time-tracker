@@ -1,0 +1,7 @@
+dog-time-data.json
+dog-time-data.backup.json
+.dog-time-*.tmp
+.env
+.env.*
+*.log
+node_modules/
