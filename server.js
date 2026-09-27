@@ -71,6 +71,10 @@ const server = http.createServer(async (req, res) => {
       send(res, 200, fs.readFileSync(pageFile), "text/html; charset=utf-8");
       return;
     }
+    if (req.method === "GET" && url.pathname === "/ui.css") {
+      send(res, 200, fs.readFileSync(path.join(folder, "ui.css")), "text/css; charset=utf-8");
+      return;
+    }
     if (req.method === "GET" && url.pathname === "/api/entries") {
       send(res, 200, { entries: readEntries() });
       return;

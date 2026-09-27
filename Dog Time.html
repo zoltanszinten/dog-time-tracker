@@ -67,17 +67,18 @@
       .today-label { max-width: 145px; }
     }
   </style>
+  <link rel="stylesheet" href="ui.css">
 </head>
-<body>
+<body class="ui-app ui-app--dog">
   <main class="shell">
     <header class="top">
-      <div class="brand"><span class="brand-mark" aria-hidden="true">🐾</span><span>Dog Time</span></div>
+      <div class="brand"><span class="brand-mark ui-mark" aria-hidden="true">🐾</span><span>Dog Time</span></div>
       <time class="today-label" id="today-date"></time>
     </header>
     <p class="file-warning" id="file-warning" hidden>Open <strong>Start Dog Time.cmd</strong> in this folder to use Dog Time.</p>
 
-    <section class="today-card" aria-labelledby="today-heading">
-      <p class="eyebrow" id="today-heading">Time outside today</p>
+    <section class="today-card ui-hero" aria-labelledby="today-heading">
+      <p class="eyebrow ui-kicker" id="today-heading">Time outside today</p>
       <div class="total" aria-live="polite" aria-atomic="true">
         <strong id="hours">0</strong><span id="hours-label">hours</span>
         <strong id="minutes">00</strong><span id="minutes-label">minutes</span>
@@ -85,26 +86,26 @@
       <p class="today-note" id="today-note">Add your first time outside today.</p>
     </section>
 
-    <section class="add-card" aria-labelledby="add-heading">
-      <h1 id="add-heading">Add time outside</h1>
+    <section class="add-card ui-surface" aria-labelledby="add-heading">
+      <h1 class="ui-title" id="add-heading">Add time outside</h1>
       <form class="entry-form" id="entry-form">
         <div class="input-wrap">
-          <input class="minutes-input" id="minutes-input" name="minutes" type="number" min="1" max="1440" step="1" inputmode="numeric" aria-label="Minutes outside" required disabled>
+          <input class="minutes-input ui-input" id="minutes-input" name="minutes" type="number" min="1" max="1440" step="1" inputmode="numeric" aria-label="Minutes outside" required disabled>
           <span class="input-suffix" aria-hidden="true">minutes</span>
         </div>
-        <button class="add-button" type="submit" disabled>Add minutes</button>
+        <button class="add-button ui-action ui-action--primary" type="submit" disabled>Add minutes</button>
       </form>
       <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
     </section>
 
     <div class="lists">
-      <section class="list-card" aria-labelledby="entries-heading">
-        <h2 id="entries-heading">Today’s entries</h2>
+      <section class="list-card ui-surface" aria-labelledby="entries-heading">
+        <h2 class="ui-title" id="entries-heading">Today’s entries</h2>
         <p class="empty" id="entries-empty">No entries yet today.</p>
         <ul class="rows" id="entries-list"></ul>
       </section>
-      <section class="list-card" aria-labelledby="history-heading">
-        <h2 id="history-heading">Previous days</h2>
+      <section class="list-card ui-surface" aria-labelledby="history-heading">
+        <h2 class="ui-title" id="history-heading">Previous days</h2>
         <p class="empty" id="history-empty">Your previous days will appear here.</p>
         <ul class="rows" id="history-list"></ul>
       </section>
